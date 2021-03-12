@@ -18,6 +18,9 @@ import com.projectfinalstartbot.function.DateTimes;
 import com.projectfinalstartbot.function.Elasticsearch;
 import com.projectfinalstartbot.function.OtherFunc;
 
+
+
+
 @Service
 public class ServiceMakroclickImpl implements ServiceMakroclick{
 	@Autowired
@@ -46,7 +49,7 @@ public class ServiceMakroclickImpl implements ServiceMakroclick{
 		try {
     		Document doc = Jsoup.connect(url)
 		                        .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36")
-		                        .timeout(600000)
+		                        .timeout(60000)
 		                        .maxBodySize(0)
 		                        .get();//
             Elements eles = doc.select(".MenuCategoryPopOver__MenuListView-sc-77t7qb-2"); 

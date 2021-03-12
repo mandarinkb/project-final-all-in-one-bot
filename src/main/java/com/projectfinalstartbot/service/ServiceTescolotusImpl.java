@@ -44,7 +44,7 @@ public class ServiceTescolotusImpl implements ServiceTescolotus{
     	try {
     		Document doc = Jsoup.connect(url)
 		                        .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36")
-		                        .timeout(600000)
+		                        .timeout(60000)
 		                        .maxBodySize(0)
 		                        .get();//
             Elements eles = doc.select(".list-item.list-item-large");
@@ -80,7 +80,7 @@ public class ServiceTescolotusImpl implements ServiceTescolotus{
         	while(checkNextPage) {  
             	Document doc = Jsoup.connect(url)
 			                        .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36")
-			                        .timeout(600000)
+			                        .timeout(60000)
 			                        .maxBodySize(0)
 			                        .get();//
             	//urlDetail
@@ -118,7 +118,7 @@ public class ServiceTescolotusImpl implements ServiceTescolotus{
     	try {
         	Document doc = Jsoup.connect(url)
 		                        .userAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36")
-		                        .timeout(600000)
+		                        .timeout(60000)
 		                        .maxBodySize(0)
 		                        .get();//
         	Elements elesUrlDetail = doc.select(".product-image__container");
